@@ -29,6 +29,7 @@
 		C07DBB0523FF543D00FFD60D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C07DBB0B23FF551300FFD60D /* APIKeys.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = APIKeys.md; sourceTree = "<group>"; };
 		C07DBB0D23FF5F2200FFD60D /* SecretThings.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; name = SecretThings.md; path = ../SecretThings.md; sourceTree = "<group>"; };
+		C07DBB1824007A1000FFD60D /* mapbox.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = mapbox.txt; sourceTree = "<group>"; };
 		C0C1BF7EB62C1AD5A5626F28 /* Pods_LocationListViewer.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LocationListViewer.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -82,6 +83,7 @@
 				C07DBB0B23FF551300FFD60D /* APIKeys.md */,
 				C07DBB0523FF543D00FFD60D /* Info.plist */,
 				C07DBB0D23FF5F2200FFD60D /* SecretThings.md */,
+				C07DBB1824007A1000FFD60D /* mapbox.txt */,
 			);
 			path = LocationListViewer;
 			sourceTree = "<group>";
