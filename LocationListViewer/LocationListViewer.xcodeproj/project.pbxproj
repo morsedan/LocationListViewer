@@ -24,6 +24,7 @@
 		C07DBB0023FF543D00FFD60D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C07DBB0323FF543D00FFD60D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C07DBB0523FF543D00FFD60D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C07DBB0B23FF551300FFD60D /* APIKeys.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = APIKeys.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,6 +63,7 @@
 				C07DBAFD23FF543C00FFD60D /* Main.storyboard */,
 				C07DBB0023FF543D00FFD60D /* Assets.xcassets */,
 				C07DBB0223FF543D00FFD60D /* LaunchScreen.storyboard */,
+				C07DBB0B23FF551300FFD60D /* APIKeys.md */,
 				C07DBB0523FF543D00FFD60D /* Info.plist */,
 			);
 			path = LocationListViewer;
