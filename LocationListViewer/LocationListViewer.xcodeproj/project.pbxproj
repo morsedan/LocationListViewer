@@ -3,10 +3,11 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		39708F0604396886FD0E128B /* Pods_LocationListViewer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C0C1BF7EB62C1AD5A5626F28 /* Pods_LocationListViewer.framework */; };
 		C07DBAF823FF543C00FFD60D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C07DBAF723FF543C00FFD60D /* AppDelegate.swift */; };
 		C07DBAFA23FF543C00FFD60D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C07DBAF923FF543C00FFD60D /* SceneDelegate.swift */; };
 		C07DBAFC23FF543C00FFD60D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C07DBAFB23FF543C00FFD60D /* ViewController.swift */; };
@@ -16,6 +17,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0CD2BCCE19945D3C78EA31F2 /* Pods-LocationListViewer.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LocationListViewer.debug.xcconfig"; path = "Target Support Files/Pods-LocationListViewer/Pods-LocationListViewer.debug.xcconfig"; sourceTree = "<group>"; };
+		9B54A49C5F61C046DA6E0DC7 /* Pods-LocationListViewer.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LocationListViewer.release.xcconfig"; path = "Target Support Files/Pods-LocationListViewer/Pods-LocationListViewer.release.xcconfig"; sourceTree = "<group>"; };
 		C07DBAF423FF543C00FFD60D /* LocationListViewer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LocationListViewer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C07DBAF723FF543C00FFD60D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C07DBAF923FF543C00FFD60D /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -26,6 +29,7 @@
 		C07DBB0523FF543D00FFD60D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C07DBB0B23FF551300FFD60D /* APIKeys.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = APIKeys.md; sourceTree = "<group>"; };
 		C07DBB0D23FF5F2200FFD60D /* SecretThings.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; name = SecretThings.md; path = ../SecretThings.md; sourceTree = "<group>"; };
+		C0C1BF7EB62C1AD5A5626F28 /* Pods_LocationListViewer.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LocationListViewer.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -33,17 +37,28 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				39708F0604396886FD0E128B /* Pods_LocationListViewer.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		18A1E6A09879DC2DC339AD75 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				C0C1BF7EB62C1AD5A5626F28 /* Pods_LocationListViewer.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		C07DBAEB23FF543C00FFD60D = {
 			isa = PBXGroup;
 			children = (
 				C07DBAF623FF543C00FFD60D /* LocationListViewer */,
 				C07DBAF523FF543C00FFD60D /* Products */,
+				DF05332B3569540980BC93AF /* Pods */,
+				18A1E6A09879DC2DC339AD75 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -71,6 +86,15 @@
 			path = LocationListViewer;
 			sourceTree = "<group>";
 		};
+		DF05332B3569540980BC93AF /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				0CD2BCCE19945D3C78EA31F2 /* Pods-LocationListViewer.debug.xcconfig */,
+				9B54A49C5F61C046DA6E0DC7 /* Pods-LocationListViewer.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -78,9 +102,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = C07DBB0823FF543D00FFD60D /* Build configuration list for PBXNativeTarget "LocationListViewer" */;
 			buildPhases = (
+				04DABF8AB460F659C8B9F8BC /* [CP] Check Pods Manifest.lock */,
 				C07DBAF023FF543C00FFD60D /* Sources */,
 				C07DBAF123FF543C00FFD60D /* Frameworks */,
 				C07DBAF223FF543C00FFD60D /* Resources */,
+				C07DBB0E23FF60F000FFD60D /* ShellScript */,
+				A902DB9432D92517A83A42E6 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -136,6 +163,65 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		04DABF8AB460F659C8B9F8BC /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-LocationListViewer-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A902DB9432D92517A83A42E6 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-LocationListViewer/Pods-LocationListViewer-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-LocationListViewer/Pods-LocationListViewer-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-LocationListViewer/Pods-LocationListViewer-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C07DBB0E23FF60F000FFD60D /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\n\n# Look for a global file named 'mapbox' or '.mapbox' within the home directory\ntoken_file=~/.mapbox\ntoken_file2=~/mapbox\ntoken=\"$(cat $token_file 2>/dev/null || cat $token_file2 2>/dev/null)\"\nif [ \"$token\" ]; then\n  plutil -replace MGLMapboxAccessToken -string $token \"$TARGET_BUILD_DIR/$INFOPLIST_PATH\"\nelse\n  echo 'warning: Missing Mapbox access token'\n  open 'https://account.mapbox.com/access-tokens/'\n  echo \"warning: Get an access token from <https://account.mapbox.com/access-tokens/>, then create a new file at $token_file or $token_file2 that contains the access token.\"\nfi\n\n";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		C07DBAF023FF543C00FFD60D /* Sources */ = {
@@ -286,6 +372,7 @@
 		};
 		C07DBB0923FF543D00FFD60D /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0CD2BCCE19945D3C78EA31F2 /* Pods-LocationListViewer.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -303,6 +390,7 @@
 		};
 		C07DBB0A23FF543D00FFD60D /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9B54A49C5F61C046DA6E0DC7 /* Pods-LocationListViewer.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
