@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		39708F0604396886FD0E128B /* Pods_LocationListViewer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C0C1BF7EB62C1AD5A5626F28 /* Pods_LocationListViewer.framework */; };
+		C0509E4B2400B0CF002D4CA3 /* NetworkController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0509E4A2400B0CF002D4CA3 /* NetworkController.swift */; };
 		C07DBAF823FF543C00FFD60D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C07DBAF723FF543C00FFD60D /* AppDelegate.swift */; };
 		C07DBAFA23FF543C00FFD60D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C07DBAF923FF543C00FFD60D /* SceneDelegate.swift */; };
 		C07DBAFC23FF543C00FFD60D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C07DBAFB23FF543C00FFD60D /* ViewController.swift */; };
@@ -19,6 +20,7 @@
 /* Begin PBXFileReference section */
 		0CD2BCCE19945D3C78EA31F2 /* Pods-LocationListViewer.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LocationListViewer.debug.xcconfig"; path = "Target Support Files/Pods-LocationListViewer/Pods-LocationListViewer.debug.xcconfig"; sourceTree = "<group>"; };
 		9B54A49C5F61C046DA6E0DC7 /* Pods-LocationListViewer.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LocationListViewer.release.xcconfig"; path = "Target Support Files/Pods-LocationListViewer/Pods-LocationListViewer.release.xcconfig"; sourceTree = "<group>"; };
+		C0509E4A2400B0CF002D4CA3 /* NetworkController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkController.swift; sourceTree = "<group>"; };
 		C07DBAF423FF543C00FFD60D /* LocationListViewer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LocationListViewer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C07DBAF723FF543C00FFD60D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C07DBAF923FF543C00FFD60D /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -29,6 +31,7 @@
 		C07DBB0523FF543D00FFD60D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C07DBB0B23FF551300FFD60D /* APIKeys.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = APIKeys.md; sourceTree = "<group>"; };
 		C07DBB0D23FF5F2200FFD60D /* SecretThings.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; name = SecretThings.md; path = ../SecretThings.md; sourceTree = "<group>"; };
+		C07DBB1824007A1000FFD60D /* mapbox.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = mapbox.txt; sourceTree = "<group>"; };
 		C0C1BF7EB62C1AD5A5626F28 /* Pods_LocationListViewer.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LocationListViewer.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -82,6 +85,8 @@
 				C07DBB0B23FF551300FFD60D /* APIKeys.md */,
 				C07DBB0523FF543D00FFD60D /* Info.plist */,
 				C07DBB0D23FF5F2200FFD60D /* SecretThings.md */,
+				C07DBB1824007A1000FFD60D /* mapbox.txt */,
+				C0509E4A2400B0CF002D4CA3 /* NetworkController.swift */,
 			);
 			path = LocationListViewer;
 			sourceTree = "<group>";
@@ -106,8 +111,8 @@
 				C07DBAF023FF543C00FFD60D /* Sources */,
 				C07DBAF123FF543C00FFD60D /* Frameworks */,
 				C07DBAF223FF543C00FFD60D /* Resources */,
-				C07DBB0E23FF60F000FFD60D /* ShellScript */,
 				A902DB9432D92517A83A42E6 /* [CP] Embed Pods Frameworks */,
+				C07DBB1924008E3C00FFD60D /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -204,7 +209,7 @@
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-LocationListViewer/Pods-LocationListViewer-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		C07DBB0E23FF60F000FFD60D /* ShellScript */ = {
+		C07DBB1924008E3C00FFD60D /* ShellScript */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -212,6 +217,8 @@
 			inputFileListPaths = (
 			);
 			inputPaths = (
+				"$(TARGET_BUILD_DIR)/$(INFOPLIST_PATH)",
+				"/Users/morse/dev/Labs21-Sprint2/LocationListViewer/LocationListViewer/LocationListViewer/mapbox.txt",
 			);
 			outputFileListPaths = (
 			);
@@ -219,7 +226,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\n\n# Look for a global file named 'mapbox' or '.mapbox' within the home directory\ntoken_file=~/.mapbox\ntoken_file2=~/mapbox\ntoken=\"$(cat $token_file 2>/dev/null || cat $token_file2 2>/dev/null)\"\nif [ \"$token\" ]; then\n  plutil -replace MGLMapboxAccessToken -string $token \"$TARGET_BUILD_DIR/$INFOPLIST_PATH\"\nelse\n  echo 'warning: Missing Mapbox access token'\n  open 'https://account.mapbox.com/access-tokens/'\n  echo \"warning: Get an access token from <https://account.mapbox.com/access-tokens/>, then create a new file at $token_file or $token_file2 that contains the access token.\"\nfi\n\n";
+			shellScript = "# Look for a global file named 'mapbox' or '.mapbox' within the home directory\ntoken_file=~/.mapbox\ntoken_file2=/Users/morse/dev/Labs21-Sprint2/LocationListViewer/LocationListViewer/LocationListViewer/mapbox.txt\n\n\ntoken=\"$(cat $token_file 2>/dev/null || cat $token_file2 2>/dev/null)\"\nif [ \"$token\" ]; then\n  plutil -replace MGLMapboxAccessToken -string $token \"$TARGET_BUILD_DIR/$INFOPLIST_PATH\"\nelse\n  echo 'warning: Missing Mapbox access token'\n  open 'https://account.mapbox.com/access-tokens/'\n  echo \"warning: Get an access token from <https://account.mapbox.com/access-tokens/>, then create a new file at $token_file or $token_file2 that contains the access token.\"\nfi\n";
 		};
 /* End PBXShellScriptBuildPhase section */
 
@@ -228,6 +235,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C0509E4B2400B0CF002D4CA3 /* NetworkController.swift in Sources */,
 				C07DBAFC23FF543C00FFD60D /* ViewController.swift in Sources */,
 				C07DBAF823FF543C00FFD60D /* AppDelegate.swift in Sources */,
 				C07DBAFA23FF543C00FFD60D /* SceneDelegate.swift in Sources */,
